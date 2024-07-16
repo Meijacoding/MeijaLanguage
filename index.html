@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bottom Navigation Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="wordlist" class="page active">
+            <h1>Wordlist</h1>
+            <div class="category-buttons">
+                <button class="category-button active" data-category="fruits">Fruits</button>
+                <button class="category-button" data-category="vegetables">Vegetables</button>
+            </div>
+            <div class="card-container" id="card-container"></div>
+        </div>
+        <div id="grammar" class="page">
+            <div id="tenses" class="category">
+                <h2>Tenses</h2>
+                <div class="category-buttons">
+                    <button class="category-button active" data-category="present">Arum</button>
+                    <button class="category-button" data-category="past">Past</button>
+                    <button class="category-button" data-category="future">Future</button>
+                    <button class="category-button" data-category="presentContinuous">PresentContinuous</button>
+                    <button class="category-button" data-category="pastContinuous">PastContinuous</button>
+                    <button class="category-button" data-category="futureContinuous">FutureContinuous</button>
+                    <button class="category-button" data-category="presentPerfect">PresentPerfect</button>
+                </div>
+                <div id="tenses-content" class="content"></div>
+            </div>
+        </div>
+
+
+
+        <!-- game section -->
+        <div id="game-quiz" class="page">
+            <div id="memory-game" class="game">
+                <h2>Memory Card Game</h2>
+                 <div class="category-buttons">
+                    <button class="category-button-game" data-category="fruits">Fruits</button>
+                    <button class="category-button-game" data-category="letters">Letters</button>
+                    <button class="category-button-game" data-category="numbers">Numbers</button>
+                    <button class="category-button-game" data-category="shapes">Shapes</button>
+                </div>
+                <!-- game board -->
+                <div class="game-board" id="game-board"></div>
+                <!-- Modal -->
+                <div id="alert-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-button">&times;</span>
+                        <p id="modal-message"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <button class="nav-button" data-target="wordlist">
+            <span class="icon">📄</span>
+            <span class="text">Wordlist</span>
+        </button>
+        <button class="nav-button" data-target="grammar">
+            <span class="icon">📚</span>
+            <span class="text">Grammar</span>
+        </button>
+        <button class="nav-button" data-target="game-quiz">
+            <span class="icon">🎮</span>
+            <span class="text">Game Quiz</span>
+        </button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

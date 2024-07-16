@@ -1,0 +1,400 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f3f3f3;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.page {
+    display: none;
+    text-align: center;
+}
+
+.page.active {
+    display: block;
+}
+
+/* Wordlist Styles */
+.category-buttons {
+    margin-bottom: 20px;
+}
+
+.category-button {
+    background-color: #4CAF50;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.category-button.active {
+    background-color: #45a049;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 800px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 150px;
+    height: 200px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    perspective: 1000px;
+    transition: transform 0.6s, box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card-front {
+    background-color: #fff;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-front p {
+    font-style: italic;
+    color: grey;
+    margin: 4px;
+}
+
+.card-back {
+    background-color: #f0f0f0;
+    transform: rotateY(180deg);
+    padding: 10px;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.card-back p {
+    font-style: italic;
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    flex: 1;
+}
+
+.nav-button .icon {
+    display: block;
+    font-size: 24px;
+}
+
+.nav-button:hover {
+    background-color: #555;
+}
+
+.nav-button:focus {
+    outline: none;
+}
+
+#tenses-content {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#tenses-content h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#tenses-content p {
+    margin: 10px 0;
+}
+
+#tenses-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#tenses-content li {
+    background: #f9f9f9;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#tenses-content li strong {
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#tenses-content li em {
+    color: #777;
+    display: block;
+}
+
+/* Game Styles */
+.game {
+    text-align: center;
+    padding: 20px;
+    background-color: #f3f3f3;
+}
+
+.game h2 {
+    color: #333;
+}
+
+.game-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    max-width: 540px; /* 4 cards * 100px width + 3 gaps * 10px margin */
+    margin: 0 auto;
+}
+
+.card-game {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    perspective: 1000px;
+    transition: transform 0.6s, box-shadow 0.3s;
+}
+
+.card-game:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.card-game-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card-game.flipped .card-game-inner {
+    transform: rotateY(180deg);
+}
+
+.card-game-front, .card-game-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card-game-front {
+    background-color: #4CAF50; /* Warna latar belakang teks depan */
+    color: #fff; /* Warna teks depan */
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.card-game-back {
+    background-color: #45a049; /* Warna latar belakang teks belakang */
+    color: #fff; /* Warna teks belakang */
+    transform: rotateY(180deg);
+    font-size: 24px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.category-buttons {
+    margin-bottom: 20px;
+}
+
+.category-button-game {
+    background-color: #4CAF50;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.category-button-game.active {
+    background-color: #45a049;
+}
+
+/*quis game*/
+.game {
+    text-align: center;
+    padding: 20px;
+    background-color: #f3f3f3;
+}
+
+.quiz-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#next-btn {
+    margin-top: 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#next-btn:hover {
+    background-color: #45a049;
+}
+
+/*game display*/
+.game-selection {
+    margin-bottom: 20px;
+}
+
+.game-btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.game-btn:hover {
+    background-color: #45a049;
+}
