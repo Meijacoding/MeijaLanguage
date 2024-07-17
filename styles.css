@@ -401,22 +401,3 @@ body {
 .game-btn:hover {
     background-color: #45a049;
 }
-@media (max-width: 480px) {
-    .category-button, .category-button-game, .game-btn {
-        padding: 8px 15px;
-        font-size: 14px;
-    }
-
-    .card, .card-game {
-        width: 100%;
-    }
-
-    .quiz-container, #tenses-content {
-        padding: 10px;
-    }
-
-    .modal-content {
-        width: 90%;
-        margin: 30% auto;
-    }
-}
