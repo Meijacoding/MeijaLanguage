@@ -408,7 +408,7 @@ body {
     }
 
     .card, .card-game {
-        width: 50%;
+        width: 100%;
     }
 
     .quiz-container, #tenses-content {
